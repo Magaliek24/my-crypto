@@ -1,0 +1,42 @@
+#reseaux {
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+    background-color: rgba(222,216,216,0.5);
+    border-radius: 8px 0 0 8px;
+    padding: 8px;
+    gap: 8px;
+    position: fixed;
+    top: 40%;
+    & i {
+        font-size: 1.5rem;
+    }
+
+}
+
+#reseaux-mobile {
+    display: none;
+}
+
+@media only screen and (max-width : 576px) {
+    #reseaux {
+        display: none;
+    }
+
+    #reseaux-mobile {
+   
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        backdrop-filter: blur(10px);
+        background-color: rgba(222,216,216,0.5);
+        padding: 8px;
+        gap: 8px;
+        position: fixed;
+        bottom: 0%;
+        font-size: 1.5rem;
+    
+    }
+    
+}
