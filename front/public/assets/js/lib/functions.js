@@ -8,14 +8,23 @@ const api_url = "https://api.rawg.io/api";
 // options ex : {Accept: 'application/json'}
 /**
  * @param {string} route
- * @param {object} options
+ * @param {object} options - Peut inclure une propriété 'params' pour les query params
  * @returns {Promise}
  */
-export async function fetch_data({ route, options = {} }) {
+export async function fetch_data({ route, api = api_url, options = {} }) {
   // Préparation de l'entête 'headers' avec les clés - valeurs nécessaires pour l'appel [Authorization: 'Bearer lkjhsdiqdfuih<fdu10']
   const headers = { Accept: "application/json", ...options.headers };
+  console.log(headers);
   // appel methode native fetch [appels API]
-  const result = await fetch(`${api_url}${route}`, { ...options, headers });
+  let query_string = "";
+  if (options.params) {
+    query_string = "?" + new URLSearchParams(options.params).toString();
+    delete options.params;
+  }
+  const result = await fetch(`${api}${route}${query_string}`, {
+    ...options,
+    headers,
+  });
 
   if (result.ok) {
     return result.json();

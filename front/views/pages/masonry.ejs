@@ -1,0 +1,25 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="<%= process.env.SITE_URL%>/assets/style/masonry.css"
+  />
+</head>
+
+<%- include('../partials/header', {title: 'Gallerie'}) %>
+
+<main>
+  <h1>Gallerie</h1>
+  <!-- js natif -->
+  <ul class="masonry-grid">
+    <% images.forEach((image) => { %>
+    <!-- fin js natif -->
+    <!-- html natif -->
+    <li class="masonry-item">
+      <img src="<%=image.urls.regular%>" alt="<%=image.alt_description%>" />
+    </li>
+    <!-- fin html natif -->
+    <% }) %>
+  </ul>
+</main>
+
+<%- include('../partials/footer') %>
