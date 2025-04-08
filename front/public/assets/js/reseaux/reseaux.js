@@ -6,7 +6,7 @@ function pos() {
   reseaux.style.right = `${pos}px`;
 }
 window.addEventListener("DOMContentLoaded", () => {
-  console.log(main.clientWidth);
+  // console.log(main.clientWidth);
   window.addEventListener("resize", pos);
 });
 pos();

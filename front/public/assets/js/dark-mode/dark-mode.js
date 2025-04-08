@@ -7,7 +7,6 @@
     const system_prefers_dark = window.matchMedia(
       "(prefers-color-scheme: dark"
     ).matches; // true || false
-    console.log(system_prefers_dark);
     const theme = stored_theme || (system_prefers_dark ? "dark" : "light");
     root.setAttribute("data-theme", theme);
     toggler_themes.forEach((toggler) => {

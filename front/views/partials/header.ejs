@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Site de suivi de portefeuilles de cryptomonnaies avec gestion ia alertes en temps réel"
+    />
+    <meta
+      type="keywords"
+      content="crypto, investissement, portefeuille"
+      <meta
+      property="og:url"
+      content="<%=process.env.SITE_URL%>"
+    />
+    <meta property="og:type" content="<%=process.env.SITE_URL%>" />
+    <!--mettre "blog" si c'est un blog -->
+    <meta property="og:title" content="My Crypto" />
+    <meta
+      property="og:image"
+      content="<%=process.env.SITE_URL%>/assets/images/Background_with_octogones.png"
+    />
+    <meta
+      property="og:description"
+      content="Site de suivi de portefeuilles de cryptomonnaies avec gestion ia alertes en temps réel"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="<%=process.env.SITE_URL%>/assets/favicons/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="<%=process.env.SITE_URL%>/assets/favicons/favicon.svg"
+    />
+    <link
+      rel="shortcut icon"
+      href="<%=process.env.SITE_URL%>/assets/favicons/favicon.ico"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="<%=process.env.SITE_URL%>/assets/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="manifest"
+      href="<%=process.env.SITE_URL%>/assets/favicons/site.webmanifest"
+    />
+    <link
+      rel="stylesheet"
+      href="<%=process.env.SITE_URL%>/assets/style/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      type="module"
+      src="<%=process.env.SITE_URL%>/assets/js/main.js"
+    ></script>
+    <title>
+      <%= typeof title !== 'undefined' ? 'My crypto | ' + title : 'My Crypto' %>
+    </title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div id="logo"><a href="/">LOGO</a></div>
+        <div id="nav">
+          <ul>
+            <li>
+              <i class="fab fa-ethereum"></i><a href="/#cryptos">Nos Cryptos</a>
+            </li>
+            <li>
+              <i class="fas fa-sd-card"></i><a href="/#carrousel">Carrousel</a>
+            </li>
+            <li>
+              <i class="fas fa-photo-film"></i><a href="/gallerie">Gallerie</a>
+            </li>
+            <li><i class="fab fa-contao"></i><a href="/contact">Contact</a></li>
+          </ul>
+          <i data-theme-toggler class="fas fa-moon"></i>
+        </div>
+        <i id="toggle-nav" class="fas fa-bars"></i>
+      </nav>
+    </header>
+  </body>
+</html>
